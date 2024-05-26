@@ -7,7 +7,7 @@
   :depends-on ()
   :components ((:file "eksd")))
 
-(defsystem "eksd-unix"
+(defsystem "eksd.unix"
   :version "0.11"
   :license "GPLv3"
   :author "Jaidyn Ann <jadedctrl@posteo.at>"

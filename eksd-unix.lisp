@@ -1,4 +1,4 @@
-;;;; eksd-unix: UNIX-style cli interface for the xxd-clone eksd.
+;;;; eksd.unix: UNIX-style cli interface for the xxd-clone eksd.
 
 ;; Copyright © 2019–2024 Jaidyn Ann <jadedctrl@posteo.at>
 ;;
@@ -15,12 +15,12 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-(defpackage :eksd-unix
+(defpackage :eksd.unix
   (:use :cl :eksd)
-  (:export :invoke
+  (:export :main
            *text-table*))
 
-(in-package :eksd-unix)
+(in-package :eksd.unix)
 
 
 ;;; —————————————————————————————————————
@@ -77,7 +77,7 @@
 ;;; Main - Invocation
 ;;; —————————————————————————————————————
 ;; nil → nil
-(defun invoke ()
+(defun main ()
   "Actual invocation of the program. This is what you should set as :toplevel."
   (multiple-value-bind (opts free) (opts:get-opts)
     (when-opt opts :help (help))

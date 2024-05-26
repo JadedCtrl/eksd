@@ -60,8 +60,8 @@ Making a binary requires a Lisp (I recommend SBCL) and Quicklisp
 Put this repository into your `quicklisp/local-projects/`, then run, in your
 lisp interpreter:
 ```
-# (ql:quickload '(eksd eksd-unix))
-# (save-lisp-and-die "eksd" :toplevel #'eksd-unix:invoke :executable t)
+# (ql:quickload '(eksd eksd.unix))
+# (save-lisp-and-die "eksd" :toplevel #'eksd.unix:main :executable t)
 ```
 
 And bam, you've made a binary. Cool.

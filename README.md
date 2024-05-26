@@ -1,9 +1,9 @@
 # EKSD
 
-xxd is a very good hexdump program that makes editing files on UNIX very easy.
+[xxd](https://hg.256bit.org/vim/file/tip/src/xxd) is a very good hexdump program that makes editing files on UNIX very easy.
 It also doesn't support text-tables. Which sucks.
 
-eksd is a clone of a good hexdump program (even matching several arguments
+[eksd](https://hak.xwx.moe/jadedctrl/eksd) is a clone of a good hexdump program (even matching several arguments
 exactly)… except it supports text-tables.
 
 ## Usage
@@ -23,7 +23,7 @@ $ eksd -t $TABLE_FILE $FILE > $HEXDUMP_FILE
 ```
 
 Text-tables are in a simple format— one hexcode per line, followed by its
-character. See ./text-tables/* for examples.
+character. See [./text_tables/*](text_tables/) for examples.
 
 By default, eksd uses a built-in *fancy* text-table— it's basic ASCII,
 except it'll print nice pictographics for newline characters, etc. These
@@ -42,7 +42,7 @@ $ eksd -t castle-table.txt castlevania.nes  | grep -A4 "18e80"
 00018eb0: 5454 5454 5454 6668 6086 6e54 5454 5454  ......DEATH.....
 00018ec0: 5454 5462 6876 7c54 7688 6c7c 8470 5454  ...BELO.LUGOSI..
 ```
-And here's that same file in xxd (just because I feel like showing off):
+And here's that same file in [Vim’s](https://www.vim.org) xxd (just because I feel like showing off):
 ```
 $ xxd castlevania.nes | grep -A4 "18e80"
 00018e80: 5454 5454 866e 6854 6460 8486 5454 5454  TTTT.nhTd`..TTTT

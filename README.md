@@ -69,5 +69,5 @@ And bam, you've made a binary. Cool.
 
 ## Misc
 * License is the GNU GPLv3 (COPYING.txt)
-* Author is Jaidyn Ann <jadedctrl@teknik.io>
-* Sauce is at https://github.com/jadedctrl/eksd
+* Author is Jaidyn Ann <jadedctrl@posteo.at>
+* Sauce is at https://hak.xwx.moe/jadedctrl/eksd

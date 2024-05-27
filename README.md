@@ -54,20 +54,22 @@ $ xxd castlevania.nes | grep -A4 "18e80"
 
 
 ## Installation
-Making a binary requires a Lisp (I recommend SBCL) and Quicklisp
-(https://quicklisp.org).
+Making a binary requires [an implementation](https://common-lisp.net/implementations) of Common Lisp installed: [Steel Bank Common Lisp](https://sbcl.org/) is our implementation-of-choice. It’s available on most operating systems under the package name `sbcl`.
 
-Put this repository into your `quicklisp/local-projects/`, then run, in your
-lisp interpreter:
+You also need the library-manager [Quicklisp](https://quicklisp.org), which can [be installed](https://www.quicklisp.org/beta/#installation) quite easily, including via our [Makefile](Makefile).
+
+To install Quicklisp, build a binary, and install it, simply:
+
 ```
-# (ql:quickload '(eksd eksd.unix))
-# (save-lisp-and-die "eksd" :toplevel #'eksd.unix:main :executable t)
+$ make quicklisp
+$ make build
+$ sudo cp eksd /usr/local/bin/eksd
 ```
 
-And bam, you've made a binary. Cool.
+Bam, you've made and installed a binary! Cool!
 
 
 ## Misc
-* License is the GNU GPLv3 (COPYING.txt)
+* License is the GNU GPLv3 ([COPYING.txt](COPYING.txt))
 * Author is Jaidyn Ann <jadedctrl@posteo.at>
 * Sauce is at https://hak.xwx.moe/jadedctrl/eksd

@@ -54,9 +54,12 @@ $ xxd castlevania.nes | grep -A4 "18e80"
 
 
 ## Installation
-Making a binary requires [an implementation](https://common-lisp.net/implementations) of Common Lisp installed: [Steel Bank Common Lisp](https://sbcl.org/) is our implementation-of-choice. It’s available on most operating systems under the package name `sbcl`.
+Making a binary requires [an implementation](https://common-lisp.net/implementations) of Common Lisp installed:
+[Steel Bank Common Lisp](https://sbcl.org/) is our implementation-of-choice. It’s available on
+most operating systems under the package name `sbcl`.
 
-You also need the library-manager [Quicklisp](https://quicklisp.org), which can [be installed](https://www.quicklisp.org/beta/#installation) quite easily, including via our [Makefile](Makefile).
+You also need the library-manager [Quicklisp](https://quicklisp.org), which can [be installed](https://www.quicklisp.org/beta/#installation)
+quite easily, including via our [Makefile](Makefile).
 
 To install Quicklisp, build a binary, and install it, simply:
 
@@ -67,6 +70,19 @@ $ sudo cp eksd /usr/local/bin/eksd
 ```
 
 Bam, you've made and installed a binary! Cool!
+
+### Tests
+eksd’s tests can be run from a REPL using `ASDF:TEST-SYSTEM`, or from the
+Makefile target “test”.
+
+```
+* (asdf:test-system :eksd)
+* (asdf:test-system :eksd/unix)
+```
+
+```
+`$ make test
+```
 
 
 ## Misc

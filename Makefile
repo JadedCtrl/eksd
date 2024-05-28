@@ -15,6 +15,6 @@ quicklisp:
 build:
 	$(LISP) --load eksd.asd \
 	--eval '(ql:quickload :eksd)' \
-	--eval '(ql:quickload :eksd.unix)' \
-	--eval '(asdf:make :eksd.unix)' \
+	--eval '(ql:quickload :eksd/unix)' \
+	--eval '(asdf:make :eksd/unix)' \
 	--eval '(quit)'

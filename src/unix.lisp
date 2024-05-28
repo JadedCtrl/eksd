@@ -15,12 +15,12 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-(defpackage :eksd.unix
+(defpackage :eksd/unix
   (:use :cl :eksd)
   (:export :main
            *text-table*))
 
-(in-package :eksd.unix)
+(in-package :eksd/unix)
 
 
 ;;; —————————————————————————————————————

@@ -283,6 +283,10 @@
 
 ;; list → list
 (defun de-tail (list)
-  "Remove the last element from a list."
+  "Return a list sans its last element."
   (reverse (cdr (reverse list))))
 
+;; list → object
+(defun tail (list)
+  "Return the last element of a list."
+  (car (last list)))

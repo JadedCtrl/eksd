@@ -18,3 +18,11 @@ build:
 	--eval '(ql:quickload :eksd/unix)' \
 	--eval '(asdf:make :eksd/unix)' \
 	--eval '(quit)'
+
+test:
+	$(LISP) --load eksd.asd \
+	--eval '(ql:quickload :eksd)' \
+	--eval '(ql:quickload :eksd/unix)' \
+	--eval '(asdf:test-system :eksd)' \
+	--eval '(asdf:test-system :eksd/unix)' \
+	--eval '(quit)'
